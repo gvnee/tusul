@@ -1,7 +1,7 @@
-import { getTutorials } from '$lib/tutorial.js'
+import { getTutorials } from '$lib/utils/getTutorials'
 
 export function load() {
-  return {menu: getTutorials()}
+  return getTutorials();
 	// return {
   //   menu: getTutorials().map((item) => ({
   //     link: item.link,

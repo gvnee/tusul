@@ -1,5 +1,5 @@
 export const getTutorials = () => {
-  const files = import.meta.glob('./tutorial/**/**.md');
+  const files = import.meta.glob('/src/content/tutorial/**/*.md');
   
   let tutorials = [];
   for(let file in files){

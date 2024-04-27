@@ -3,7 +3,13 @@
   console.log(data)
 </script>
 
-<div class="container">
+{#each data.tutorials as tutorial}
+<p>
+  <a href={tutorial}>{tutorial}</a>
+</p>
+{/each}
+
+<!-- <div class="container">
   {#each data.menu as item}
     <div class="card">
       <a href={item.sub[0].sub[0].path}>{item.name}</a>
@@ -14,9 +20,9 @@
       </ul>
     </div>
   {/each}
-</div>
+</div> -->
 
-<style>
+<style lang="scss">
   a{
     text-decoration: none;
   }
