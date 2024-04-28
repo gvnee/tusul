@@ -1,6 +1,5 @@
 <script>
   export let data
-  console.log(data)
 </script>
 
 {#each data.tutorials as tutorial}
