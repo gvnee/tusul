@@ -1,6 +1,7 @@
 # cool
 
 ```CPP
+/* nice.cpp */
 #include<stdio.h>
 int main(){
   printf("Nice\n");

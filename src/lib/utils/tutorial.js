@@ -1,3 +1,5 @@
+// no longer used ദ്ദി(˘‿˘)
+
 export const getTutorials = () => {
   const files = import.meta.glob('/src/content/tutorial/**/*.md');
   

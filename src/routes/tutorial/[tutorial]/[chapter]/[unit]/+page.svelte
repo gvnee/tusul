@@ -1,23 +1,23 @@
 <script>
   import { page } from '$app/stores';
-  import CodeMirror from "svelte-codemirror-editor";
   import { cpp } from "@codemirror/lang-cpp";
+  import CodeMirror from "svelte-codemirror-editor";
   import { oneDark } from "@codemirror/theme-one-dark";
-  export let data;
-
-  let value = "";
-  const {tutorials} = data;
   
+  export let data;
+  const {Content, unitsList} = data;
+  
+  let value = "";
   let next = "", prev = "";
   let current = "/tutorial"
   for(const name in $page.params){
     current = current.concat('/', $page.params[name]);
   }
   
-  tutorials.forEach((tutorial, i) => {
+  unitsList.forEach((tutorial, i) => {
     if(tutorial == current){
-      prev = i!=0 ? tutorials[i-1] : "";
-      next = i!=tutorials.length-1 ? tutorials[i+1] : "";
+      prev = i!=0 ? unitsList[i-1] : "";
+      next = i!=unitsList.length-1 ? unitsList[i+1] : "";
     }
   });
 </script>
@@ -30,7 +30,7 @@
     {#if next != ""}
     <a href={next}>next</a>
     {/if}
-    <svelte:component this={data.content} />
+    <Content />
   </article>
   
   <div id="sep"></div>

@@ -4,16 +4,16 @@
   <a href="/blog">blog</a>
 </nav>
 
-<style>
+<style lang="scss">
   nav {
-    background-color: black;
-    color: white;
+    border-top: 5px solid $red;
+    background-color: $bg2;
     display: flex;
     justify-content: end;
   }
   a {
     text-decoration: none;
-    color: blue;
+    color: $yellow2;
     margin: 1em;
     font-size: large;
   }

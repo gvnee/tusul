@@ -1,11 +1,5 @@
-import { getTutorials } from '$lib/utils/getTutorials'
+import { getMenu } from '$lib/utils/getMenu'
 
 export function load() {
-  return getTutorials();
-	// return {
-  //   menu: getTutorials().map((item) => ({
-  //     link: item.link,
-  //     title: item.title
-  //   }))
-  // }
+  return getMenu();
 }

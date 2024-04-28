@@ -1,4 +1,6 @@
-@import url('./prism-one-dark.css');
+@import 'variables';
+@import url('./prism-gruvbox-dark.css');
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -9,8 +11,8 @@ html, body {
   margin: 0;
 }
 body {
-  background-color: #eee;
-  color: #333;
+  background-color: $bg;
+  color: $fg;
   font-family: sans-serif;
   padding: 0;
 }

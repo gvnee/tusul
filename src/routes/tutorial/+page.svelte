@@ -1,43 +1,48 @@
 <script>
   export let data
+  const {menu} = data;
 </script>
 
-{#each data.tutorials as tutorial}
-<p>
-  <a href={tutorial}>{tutorial}</a>
-</p>
-{/each}
-
-<!-- <div class="container">
-  {#each data.menu as item}
-    <div class="card">
-      <a href={item.sub[0].sub[0].path}>{item.name}</a>
-      <ul class="list">
-        {#each item.sub as cool}
-          <a href={cool.sub[0].path}>{cool.name}</a>
+<div id="container">
+  {#each Object.entries(menu) as [tutorial, tutorials]}
+    <div id="card">
+      <a id="title" href={tutorials._link}>{tutorial}</a>
+      <div id="list">
+        {#each Object.entries(tutorials) as [chapter, chapters]}
+          {#if chapter!="_link"}
+            <a href={chapters._link} id="item">{chapter}</a>
+          {/if}
         {/each}
-      </ul>
+      </div>
     </div>
   {/each}
-</div> -->
+</div>
 
 <style lang="scss">
-  a{
+  a {
     text-decoration: none;
   }
-  .container{
+  #container {
     display: flex;
   }
-  .card{
-    background-color: black;
+  #card {
+    background-color: $bg2;
     margin: 1em;
     padding: 1em;
-    border-radius: 10px;
+    border-radius: 5px;
   }
-  .list{
+  #title {
+    color: $blue;
+    font-size: 2em;
+  }
+  #list {
     display: flex;
     flex-direction: column;
     padding: 0;
     gap: 10px;
   }
+  #item {
+    color: $orange;
+  }
+
 </style>
