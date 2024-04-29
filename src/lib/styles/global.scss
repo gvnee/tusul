@@ -1,6 +1,8 @@
 @import 'variables';
 @import url('./prism-gruvbox-dark.css');
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -13,6 +15,11 @@ html, body {
 body {
   background-color: $bg;
   color: $fg;
-  font-family: sans-serif;
+  font-family: "Fira Code";
   padding: 0;
+}
+
+::selection {
+  color: $bg2;
+  background: $yellow2;
 }

@@ -6,12 +6,10 @@
 <div id="container">
   {#each Object.entries(menu) as [tutorial, tutorials]}
     <div id="card">
-      <a id="title" href={tutorials._link}>{tutorial}</a>
+      <a id="title" href={`/tutorial/${tutorial}`}>{tutorial}</a>
       <div id="list">
         {#each Object.entries(tutorials) as [chapter, chapters]}
-          {#if chapter!="_link"}
-            <a href={chapters._link} id="item">{chapter}</a>
-          {/if}
+          <a href={`/tutorial/${tutorial}/${chapter}`} id="item">{chapter}</a>
         {/each}
       </div>
     </div>

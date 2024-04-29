@@ -10,6 +10,10 @@
     background-color: $bg2;
     display: flex;
     justify-content: end;
+    width: 100vw;
+    z-index: 99;
+    position: fixed;
+    height: $header-height;
   }
   a {
     text-decoration: none;

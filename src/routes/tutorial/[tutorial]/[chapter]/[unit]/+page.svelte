@@ -1,13 +1,10 @@
 <script>
   import { page } from '$app/stores';
-  import { cpp } from "@codemirror/lang-cpp";
-  import CodeMirror from "svelte-codemirror-editor";
-  import { oneDark } from "@codemirror/theme-one-dark";
+  import Editor from '$lib/components/editor.svelte';
   
   export let data;
   const {Content, unitsList} = data;
   
-  let value = "";
   let next = "", prev = "";
   let current = "/tutorial"
   for(const name in $page.params){
@@ -25,27 +22,17 @@
 <div id="container">
   <article id="content">
     {#if prev != ""}
-    <a href={prev}>previous</a>
+      <a href={prev}>previous</a>
     {/if}
     {#if next != ""}
-    <a href={next}>next</a>
+      <a href={next}>next</a>
     {/if}
     <Content />
   </article>
   
-  <div id="sep"></div>
+  <div id="seperator"></div>
 
-  <CodeMirror
-    class="editor"
-    bind:value
-    lang={cpp()}
-    theme={oneDark}
-    styles={{
-      "&": {
-          maxWidth: "100%",
-          height: "40rem"
-      },
-    }}/>
+  <Editor />
 </div>
 
 <style lang="scss">
@@ -57,14 +44,12 @@
   #content {
     width: 50%;
     padding: 20px;
+    max-height: 100%;
+    overflow: auto;
   }
-  #sep {
-    width: 10px;
+  #seperator {
+    width: 5px;
     background-color: black;
     cursor: ew-resize;
-  }
-  #container :global(.editor) {
-    width: 50%;
-    max-height: 80%;
   }
 </style>

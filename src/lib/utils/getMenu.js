@@ -11,8 +11,8 @@ export function getMenu() {
 		const chapter = arr[1];
 		const unit = arr[2];
 		
-		if(!menu[tutorial]) menu[tutorial] = {_link: link};
-		if(!menu[tutorial][chapter]) menu[tutorial][chapter] = {_link: link};
+		if(!menu[tutorial]) menu[tutorial] = {};
+		if(!menu[tutorial][chapter]) menu[tutorial][chapter] = {};
 		menu[tutorial][chapter][unit] = link;
 	}
 	return {menu};

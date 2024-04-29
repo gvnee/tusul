@@ -8,16 +8,18 @@
  * @version 1.0
  */
 
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #ebdbb2; /* fg1 / fg */
-	font-family: Consolas, Monaco, "Andale Mono", monospace;
+	font-family: "Fira Code", Consolas, Monaco, "Andale Mono", monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	line-height: 1.5;
+	border-radius: 10px;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;

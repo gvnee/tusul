@@ -12,3 +12,12 @@
     <slot />
   </main>
 {/key}
+
+
+
+<style lang="scss">
+  main {
+    padding-top: $header-height;
+    height: 100%;
+  }
+</style>
