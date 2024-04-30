@@ -1,6 +1,8 @@
 <script>
-  import '$lib/styles/global.scss'
+  import '$lib/styles/global.scss';
+  import 'iconify-icon';
   import Header from '$lib/components/header.svelte';
+  import Footer from '$lib/components/footer.svelte';
   import {fade} from 'svelte/transition';
   export let data;
 </script>
@@ -14,6 +16,7 @@
 {/key}
 
 
+<Footer />
 
 <style lang="scss">
   main {

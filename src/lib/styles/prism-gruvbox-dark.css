@@ -65,6 +65,13 @@ pre[class*="language-"] {
 	border-radius: 0.3em;
 }
 
+:not(pre) > code {
+	margin: 0 .2rem;
+	padding: .2rem .4rem;
+	border-radius: 0.3em;
+	background-color: #1d2021;
+}
+
 .token.comment,
 .token.prolog,
 .token.cdata {

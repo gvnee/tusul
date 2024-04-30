@@ -3,7 +3,7 @@
   import Editor from '$lib/components/editor.svelte';
   
   export let data;
-  const {Content, unitsList} = data;
+  const {Content, metadata, unitsList} = data;
   
   let next = "", prev = "";
   let current = "/tutorial"

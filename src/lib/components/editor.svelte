@@ -3,18 +3,19 @@
   import CodeMirror from "svelte-codemirror-editor";
   import { oneDark } from "@codemirror/theme-one-dark";
 
-  let textValue = "";
+  let value = "";
 </script>
 
 <CodeMirror
-  bind:textValue
+  bind:value
   class="editor"
   lang={cpp()}
   theme={oneDark}
   styles={{
     "&": {
         maxWidth: "100%",
-        height: "100%"
+        height: "100%",
+        font: "1.6em Fira Code"
     },
 }}/>
 

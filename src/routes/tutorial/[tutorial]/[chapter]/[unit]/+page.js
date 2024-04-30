@@ -6,9 +6,9 @@ export async function load({params}){
     path = path.concat('/', params[name]);
   }
   const post = await import (`/src/content/tutorial${path}.md`);
-  const content = post.default;
   return {
-    Content: content,
+    Content: post.default,
+    metadata: post.metadata,
     unitsList: getUnits(params.tutorial)
   };
 }
